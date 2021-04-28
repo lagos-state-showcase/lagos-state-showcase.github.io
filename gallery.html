@@ -31,10 +31,8 @@
     			<div class="row mx-0">
     				<div class="col-md-8">
     					<ul class="list-unstyled d-flex">
-    						<li class="mx-3"><a class="text-white" href=""><i class="fa fa-arrow-left"></i></a></li>
-    						<li class="mx-3"><a class="text-white" href=""><i class="fa fa-expand mr-1"></i> Preview</a></li>
-    						<li class="mx-3"><a class="text-white" href=""><i class="fa fa-image mr-1"></i> Gallery</a></li>
-    						<li class="mx-3"><a class="text-white" href=""><i class="fa fa-stream mr-1"></i> Timeline</a></li>
+    						<li class="mx-3"><a class="text-white" href="index.html"><i class="fa fa-arrow-left"></i></a></li>
+    						<li class="mx-3"><a class="text-orange" href=""><i class="fa fa-image mr-1"></i> Gallery</a></li>
     					</ul>
     				</div>
 
@@ -184,7 +182,7 @@
 				info = markers[lga];
 				showMap(info[0]);
 			}
-			else if (lga=='Local Government'){
+			else if (lga=='Local Government' || lga=='Ministry'){
 				initMap();
 			}
 			else{
@@ -199,7 +197,9 @@
 			let options = {
 			  center: props.center,
 			  zoom: 16,
-			  minZoom: 16
+			  minZoom: 16,
+			  mapTypeId: 'hybrid',
+			  clickableIcons: false
 			};
 
 			// New Map
@@ -257,7 +257,8 @@
 			let options = {
 			  center: {lat: 6.5244, lng: 3.3792},
 			  zoom: 12,
-			  minZoom: 11
+			  minZoom: 11,
+			  mapTypeId: 'hybrid'
 			};
 
 			// New Map

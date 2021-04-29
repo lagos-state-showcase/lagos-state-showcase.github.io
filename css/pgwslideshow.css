@@ -50,6 +50,7 @@
     width: 100%;
     padding: 10px;
     display: none;
+    line-height: 2;
 }
 
 .pgwSlideshow .ps-caption span {

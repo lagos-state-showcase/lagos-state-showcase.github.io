@@ -10,7 +10,15 @@ a{
 	text-decoration: none!important;
 }
 
+footer{
+    border-top: 1px solid #ccc;
+}
 
+.divider{
+	border: 1px solid #333;
+	margin: 0 auto;
+	width: 90%;
+}
 .navbar-nav li:hover > ul.dropdown-menu {
 	display: block;
 }
@@ -36,6 +44,7 @@ a{
 
 .gm-style .gm-style-iw-c{
 	padding: 0;
+	background: transparent;
 }
 
 .gm-style-iw-c button{
@@ -141,15 +150,16 @@ button.gm-ui-hover-effect img {
 }
 
 .btn1 {
-	background: var(--unnamed-color-ffffff);
+	background: transparent;
 	box-shadow: 0px 14px 45px #05050512;
-	color: var(--unnamed-color-000000);;
+	color: var(--unnamed-color-ffffff);;
 	padding: 15px 30px;
+	border: 1px solid var(--unnamed-color-ffffff);
 }
 
 .btn1:hover, .btn1:active {
-	background: var(--unnamed-color-f00000);
-	color: var(--unnamed-color-ffffff);
+	background: var(--unnamed-color-ffffff);
+	color: var(--unnamed-color-000000);
 }
 
 .font-mont{
@@ -308,6 +318,10 @@ button.gm-ui-hover-effect img {
 	color: #fff;
 }
 
+a .thumnail-location:hover{
+	background: rgba(0,0,0,1);
+}
+
 .collaborators img {
 	height: 100px;
 	width: auto;
@@ -419,6 +433,18 @@ button.gm-ui-hover-effect img {
 
 .bottom-0{
 	bottom: 0;
+}
+
+.top-0{
+	top: 0;
+}
+
+svg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 @media screen and (max-width: 1240px) {

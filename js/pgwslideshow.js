@@ -319,6 +319,12 @@
                 element.description = elementDescription;
             }
 
+            // Get description
+            var elementStatus = obj.find('img').attr('data-status');
+            if ((typeof elementStatus != 'undefined') && (elementStatus != '')) {
+                element.status = elementStatus;
+            }
+
             return element;
         };
 
@@ -334,6 +340,11 @@
             if (element.description) {
                 if (elementText != '') elementText += '<br>';
                 elementText += element.description;
+            }
+
+            if (element.status) {
+                if (elementText != '') elementText += '<br>';
+                elementText += "Status: " + element.status;
             }
 
             if (elementText != '') {

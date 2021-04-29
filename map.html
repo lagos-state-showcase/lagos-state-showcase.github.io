@@ -24,15 +24,43 @@
 </head>
 <body>
 
+	<header class="px-120">
+        <nav class="navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand logo" href="#">
+                <img src="img/lagos-logo.png" class="mr-4" width="70">
+                <span class="d-none d-md-inline-flex font-12">Lagos State Infrastructure Showcase</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ml-lg-3">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item ml-lg-3">
+                        <a class="nav-link" href="map.html">Projects</a>
+                    </li>
+                    <li class="nav-item ml-lg-3">
+                        <a class="nav-link" href="#">Locations</a>
+                    </li>
+                    <li class="nav-item ml-lg-5 d-flex align-self-md-center mt-2 mt-md-0">
+                        <a href="" class="text-dark"><i class="fas fa-search"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
     <main>
     	<!-- Preview Area -->
     	<section class="preview px-120 py-5 bg-dark text-white">
     		<div class="w-100 mx-0">
     			<div class="row mx-0">
     				<div class="col-md-8">
-    					<ul class="list-unstyled d-flex">
+    					<ul class="list-unstyled d-flex align-items-center">
     						<li class="mx-3"><a class="text-white" href="index.html"><i class="fa fa-arrow-left"></i></a></li>
-    						<li class="mx-3"><a class="text-orange" href=""><i class="fa fa-image mr-1"></i> Lagos State Projects</a></li>
+    						<li class="mx-3"><a class="text-orange" href=""><i class="fa fa-map-marked-alt font-20 mr-1"></i> Map</a></li>
     					</ul>
     				</div>
 
@@ -48,11 +76,12 @@
     	<!-- Preview Area -->
     	<section class="preview px-120 py-5 bg-dark text-white">
     		<div class="w-100 mx-0">
-    			<div class="row mx-0">
-    				<div class="col-md-12">
-    					<ul class="list-unstyled d-flex align-items-center justify-content-lg-end">
-    						<li class="mr-3"><i class="fa fa-filter mr-1"></i> Filter by:</li>
-    						<li class="mr-3 text-dark">
+    			<div class="row mx-0 align-items-center">
+    				<div class="col-lg-4 font-bold mb-3 order-2 order-lg-1">Suggestions based on your Location</div>
+    				<div class="col-lg-8 order-1 order-lg-2">
+    					<ul class="list-unstyled w-100 d-lg-flex align-items-center justify-content-lg-end">
+    						<li class="mr-3 mb-3"><i class="fa fa-filter mr-1"></i> Filter by:</li>
+    						<li class="mr-3 mb-3 text-dark">
     							<select class="form-control callMap">
     								<option selected="">Local Government</option>
 									<option>Agege</option>
@@ -77,7 +106,7 @@
 							        <option>Surulere</option>
 								</select>
     						</li>
-    						<li class="mr-3 text-dark">
+    						<li class="mr-3 mb-3 text-dark">
     							<select class="form-control callMap">
     								<option selected="">Ministry</option>
     								<option>Health</option>
@@ -85,12 +114,15 @@
 								  	<option>Works</option>
 								</select>
     						</li>
-    						<li class="mr-3 text-dark">
+    						<li class="mr-3 mb-3 text-dark">
     							<select class="form-control callMap">
     								<option selected="">Themes Agenda</option>
-    								<option>Health</option>
-								  	<option>Science and Technology</option>
-								  	<option>Works</option>
+    								<option> Traffic Management and Transportation</option>
+    								<option> Health and Environment</option>
+    								<option> Education and Technology</option>
+    								<option> Making Lagos a 21st Century Economy</option>
+    								<option> Entertainment and Tourism</option>
+    								<option> Security and Governance</option>
 								</select>
     						</li>
     					</ul>
@@ -101,11 +133,52 @@
 
     	<!-- Map Area -->
     	<section class="map-area position-relative">
-    		<div id="map" class="w-100" style="height: 500px;"></div>
-    		<div id="error" class="w-100" style="display:none;background: rgba(0,0,0,0.7); color: #fff; height: 500px;position: absolute;bottom: 0;">
+    		<div id="map" class="w-100" style="height: 600px;"></div>
+    		<div id="error" class="w-100" style="display:none;background: rgba(0,0,0,0.7); color: #fff; height: 600px;position: absolute;bottom: 0;">
 	    		<div class="h-100 d-flex align-items-center justify-content-center">
 	    			<h2 class="text-center font-bold">No Project Yet</h2>
 	    		</div>
+	    	</div>
+
+	    	<div class="nearest-project position-absolute top-0 mt-3">
+		    	<div class="thumnail col-lg-11 mb-2">
+					<div class="thumnail-location d-flex p-4 px-5 rounded">
+						<div><i class="fa fa-map-marker-alt mr-2"></i></div>
+						<div class="">
+							<div class="p-0 mb-3">Ikoyi Comprehensive High School</div>
+							<div class="p-0">G.R.A Ikoyi, Arena Busstop, Lagos,Nigeria</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="thumnail col-lg-11 mb-2">
+					<div class="thumnail-location d-flex p-4 px-5 rounded">
+						<div><i class="fa fa-map-marker-alt mr-2"></i></div>
+						<div class="">
+							<div class="p-0 mb-3">Ikoyi Comprehensive High School</div>
+							<div class="p-0">G.R.A Ikoyi, Arena Busstop, Lagos,Nigeria</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="thumnail col-lg-11 mb-2">
+					<div class="thumnail-location d-flex p-4 px-5 rounded">
+						<div><i class="fa fa-map-marker-alt mr-2"></i></div>
+						<div class="">
+							<div class="p-0 mb-3">Ikoyi Comprehensive High School</div>
+							<div class="p-0">G.R.A Ikoyi, Arena Busstop, Lagos,Nigeria</div>
+						</div>
+					</div>
+				</div>
+
+				<div>
+	    			<div class="col-lg-11 px-3  rounded-bottom ">
+		    			<input type="text" class="form-control py-3 text-center border-1" placeholder="Find a project near you" style="height: 42px;">
+		    		</div>
+		    	</div>
+	    	</div>
+
+	    	<div class="search-nearest position-absolute bottom-0 mb-3">
 	    	</div>
     	</section>
     </main>
@@ -190,7 +263,7 @@
 				info = markers[lga];
 				showMap(info[0]);
 			}
-			else if (lga=='Local Government' || lga=='Ministry'){
+			else if (lga=='Local Government' || lga=='Ministry' || lga=='Themes Agenda'){
 				initMap();
 			}
 			else{
@@ -207,7 +280,8 @@
 			  zoom: 16,
 			  minZoom: 16,
 			  mapTypeId: 'hybrid',
-			  clickableIcons: false
+			  clickableIcons: false,
+			  mapTypeControl: false
 			};
 
 			// New Map
@@ -247,7 +321,6 @@
 			    						<div class="p-0 font-16 font-mont">G.R.A Ikoyi, Arena Busstop, Lagos,Nigeria</div>
 			    					</div>
 		    					</div>
-		    					<img src='img/preview-1.png' width="400">
 		    				</a>
 		    			`
 				  	});
@@ -266,7 +339,8 @@
 			  center: {lat: 6.5244, lng: 3.3792},
 			  zoom: 12,
 			  minZoom: 11,
-			  mapTypeId: 'hybrid'
+			  mapTypeId: 'hybrid',
+			  mapTypeControl: false
 			};
 
 			// New Map

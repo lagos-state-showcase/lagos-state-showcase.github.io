@@ -18,10 +18,26 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
 
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css" media="all" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400italic" rel="stylesheet" type="text/css">
+	<link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css" media="all" rel="stylesheet" />
+	<!-- <link rel="stylesheet" href="css/style.min.css" /> -->
+	<link rel="stylesheet" href="css/paver.min.css" />
 
 	<title>Lagos State Infrastructure Showcase</title>
 	<link rel="stylesheet" type="text/css" href="css/pgwslideshow.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<style type="text/css">
+		.panorama {
+			height: 400px;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			img {
+				height: 100%;
+			}
+		}
+	</style>
 </head>
 <body>
 	<header class="px-120">
@@ -59,7 +75,7 @@
     			<div class="row mx-0">
     				<div class="col-md-8">
     					<ul class="list-unstyled d-flex">
-    						<li class="mx-3"><a class="text-white" href="gallery.html"><i class="fa fa-arrow-left"></i></a></li>
+    						<li class="mx-3"><a class="text-white" href="map.html"><i class="fa fa-arrow-left"></i></a></li>
     						<li class="mx-3">
     							<div class="text-orange">Ikoyi Comprehensive High School</div>
     						</li>
@@ -74,11 +90,18 @@
     			</div>
     		</div>
     	</section>
+    	
+		
 
     	<section class="px-120 bg-dark">
     		<!-- <img src="https://d3500i1ecak5li.cloudfront.net/s3fs-public/styles/banner/public/images/chapters/lagos.jpg" class="w-100"> -->
     		<ul class="pgwSlideshow">
-                <li><img src="https://www.beautywestafrica.com/wp-content/uploads/2017/12/dubai.jpg" alt="Ikoyi Comprehensive High School" data-description="G.R.A Ikoyi, Arena Busstop, Lagos, Nigeria" data-status="Ongoing"></li>
+                <li><figure>
+		    <div data-paver>
+		        <img src="/Users/NATFINEST/Downloads/paver-master/demo/images/p1.jpg" title="Sunset in the heart of Aarhus" alt="A panorama taken from the roof of my penthouse unit in the center of Aarhus." />
+		    </div>
+		    <figcaption>Sunset in the heart of Aarhus&mdash;A panorama taken from the roof of my penthouse unit in the center of Aarhus.</figcaption>
+		</figure></li>
                 <li><img src="https://i.pinimg.com/originals/0f/c9/8e/0fc98ec9b8f34d5667a39d10d74edf46.jpg" alt="Rio de Janeiro, Brazil"></li>
                 <li><img src="https://buzznigeria.com/wp-content/uploads/2014/11/Lagos12.jpg" alt=""></li>
                 <li><img src="https://farm4.static.flickr.com/3406/3523586786_ce034b66cd_o.jpg" alt=""></li>
@@ -234,5 +257,15 @@
           	$(this).hide();
 	    });
     </script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+		<script type="text/javascript" src="js/jquery.paver.min.js"></script>
+		<script type="text/javascript" src="js/functions.min.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				// Paver
+				$('div[data-paver]').paver();
+			});
+		</script>
 </body>
 </html>

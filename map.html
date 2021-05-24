@@ -77,8 +77,8 @@
     	<section class="preview px-120 py-5 bg-dark text-white">
     		<div class="w-100 mx-0">
     			<div class="row mx-0 align-items-center">
-    				<div class="col-lg-4 font-bold mb-3 order-2 order-lg-1">Suggestions based on your Location</div>
-    				<div class="col-lg-8 order-1 order-lg-2">
+    				<div class="col-lg-4 col-md-6 font-bold mb-3 order-2 order-md-1">Suggestions based on your Location</div>
+    				<div class="col-lg-8 col-md-6 order-1 order-md-2">
     					<ul class="list-unstyled w-100 d-lg-flex align-items-center justify-content-lg-end">
     						<li class="mr-3 mb-3"><i class="fa fa-filter mr-1"></i> Filter by:</li>
     						<li class="mr-3 mb-3 text-dark">
@@ -133,15 +133,15 @@
 
     	<!-- Map Area -->
     	<section class="map-area position-relative">
-    		<div id="map" class="w-100" style="height: 600px;"></div>
-    		<div id="error" class="w-100" style="display:none;background: rgba(0,0,0,0.7); color: #fff; height: 600px;position: absolute;bottom: 0;">
+    		<div id="map" class="w-100" style="height: 700px;"></div>
+    		<div id="error" class="w-100" style="display:none;background: rgba(0,0,0,0.7); color: #fff; height: 700px;position: absolute;bottom: 0;">
 	    		<div class="h-100 d-flex align-items-center justify-content-center">
 	    			<h2 class="text-center font-bold">No Project Yet</h2>
 	    		</div>
 	    	</div>
 
-	    	<div class="nearest-project position-absolute top-0 mt-3">
-		    	<div class="thumnail col-lg-11 mb-2">
+	    	<div class="nearest-project position-absolute top-0 mt-3 px-4 d-none d-md-block">
+		    	<a href="preview.html" class="thumnail col-md-9 col-lg-11 mb-2">
 					<div class="thumnail-location d-flex p-4 px-5 rounded">
 						<div><i class="fa fa-map-marker-alt mr-2"></i></div>
 						<div class="">
@@ -149,9 +149,9 @@
 							<div class="p-0">G.R.A Ikoyi, Arena Busstop, Lagos,Nigeria</div>
 						</div>
 					</div>
-				</div>
+				</a>
 
-				<div class="thumnail col-lg-11 mb-2">
+				<a href="preview.html" class="thumnail col-md-9 col-lg-11 mb-2">
 					<div class="thumnail-location d-flex p-4 px-5 rounded">
 						<div><i class="fa fa-map-marker-alt mr-2"></i></div>
 						<div class="">
@@ -159,9 +159,9 @@
 							<div class="p-0">G.R.A Ikoyi, Arena Busstop, Lagos,Nigeria</div>
 						</div>
 					</div>
-				</div>
+				</a>
 
-				<div class="thumnail col-lg-11 mb-2">
+				<a href="preview.html" class="thumnail col-md-9 col-lg-11 mb-2">
 					<div class="thumnail-location d-flex p-4 px-5 rounded">
 						<div><i class="fa fa-map-marker-alt mr-2"></i></div>
 						<div class="">
@@ -169,11 +169,21 @@
 							<div class="p-0">G.R.A Ikoyi, Arena Busstop, Lagos,Nigeria</div>
 						</div>
 					</div>
-				</div>
+				</a>
+
+				<a href="preview.html" class="thumnail col-md-9 col-lg-11 mb-2">
+					<div class="thumnail-location d-flex p-4 px-5 rounded">
+						<div><i class="fa fa-map-marker-alt mr-2"></i></div>
+						<div class="">
+							<div class="p-0 mb-3">Ikoyi Comprehensive High School</div>
+							<div class="p-0">G.R.A Ikoyi, Arena Busstop, Lagos,Nigeria</div>
+						</div>
+					</div>
+				</a>
 
 				<div>
-	    			<div class="col-lg-11 px-3  rounded-bottom ">
-		    			<input type="text" class="form-control py-3 text-center border-1" placeholder="Find a project near you" style="height: 42px;">
+	    			<div class="col-lg-12 rounded-bottom px-0">
+		    			<input type="text" class="form-control py-3 text-center border-1" placeholder="Find a project near you" style="height: 42px;border: 1px solid #000">
 		    		</div>
 		    	</div>
 	    	</div>
@@ -337,7 +347,7 @@
 			// Map Options
 			let options = {
 			  center: {lat: 6.5244, lng: 3.3792},
-			  zoom: 12,
+			  zoom: 9,
 			  minZoom: 11,
 			  mapTypeId: 'hybrid',
 			  mapTypeControl: false
